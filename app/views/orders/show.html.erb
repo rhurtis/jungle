@@ -11,7 +11,9 @@
   <div>
     item name, image, description, quantities, price totals
     <%= @order.id %>
-    <%= @order.line_items %>
+      <div>
+        <%= render @order.line_items %>
+      </div>
   </div>
 
   <div>
