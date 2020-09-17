@@ -8,6 +8,20 @@
     <h4>Thank you for your order!</h4>
   </div>
 
+  <div>
+    item name, image, description, quantities, price totals
+    <%= @order.id %>
+    <%= @order.line_items %>
+  </div>
+
+  <div>
+    final amount
+  </div>
+
+  <div>
+    email that was used
+  </div>
+
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
 </section>
