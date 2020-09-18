@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resource :cart, only: [:show] do
     post   :add_item
     post   :remove_item
+
   end
 
   resources :orders, only: [:create, :show]
@@ -71,4 +72,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resource :about, only: [:show]
 end
