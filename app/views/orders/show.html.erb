@@ -9,19 +9,36 @@
   </div>
 
   <div>
-    item name, image, description, quantities, price totals
-    <%= @order.id %>
-      <div>
-        <%= render @order.line_items %>
-      </div>
+      <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Image</th>
+          <th>Description</th>
+          <th>Quantity</th>
+          <th>Price Total</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @order.line_items.each do |item| %>
+        <%= render 'line_item', item: item %>
+      <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            TOTAL:
+          </th>
+          <th>
+            <%= humanized_money_with_symbol (@order.total_cents / 100.0) %>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
   </div>
 
   <div>
-    final amount
-  </div>
-
-  <div>
-    email that was used
+    Here is the email that was used to make the order: <%= @order.email %>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
