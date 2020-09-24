@@ -1,7 +1,18 @@
 # Jungle
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+After inheriting an existing code-base I was able to add features and fix bugs as shown below.
 
+## Screenshots
+
+### Added basic http authorization for admins
+!["admin http authorization"](docs/admin-basic-auth.png)
+
+### Added a redirect when a user attempts to checkout with an empty cart
+!["empt card redirect message"](docs/empty-cart-redirect.png)
+
+### Included order details after a successful checkout
+!["order detail feature"](docs/order-details.png)
 
 ## Setup
 
@@ -26,6 +37,3 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * PostgreSQL 9.x
 * Stripe
 
-
-## use for commenting erb
-<% raise enhanced_cart.inspect %>
