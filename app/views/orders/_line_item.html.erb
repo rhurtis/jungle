@@ -1,0 +1,6 @@
+<tr><th><%= item.product.name %></th>
+<th><%= image_tag item.product.image.url, class: 'main-img' %></th> 
+<th><%= item.product.description %></th> 
+<th><%= item.quantity %></th> 
+<th><%= humanized_money_with_symbol (item.product.price_cents * item.quantity) / 100 %></th></tr> 
+
